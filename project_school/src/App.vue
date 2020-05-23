@@ -1,70 +1,86 @@
 <template>
-  <div id="app">   
-    <Alunos/>
+  <div id="app">
+    <Nav></Nav>
+    <div class="marginPrincipal">
+     <router-view :key="$route.fullpath"></router-view>
+      <!--professor/-->      
+      <!--alunos/-->
+    </div>
   </div>
 </template>
 
 <script>
-import Alunos from './components/Aluno/Alunos.vue'
+//import Alunos from './components/Aluno/Alunos.vue'
+//import Professor from './components/Professor/Professor'
+//import Sobre from './components/Sobre/Sobre.vue'
+import Nav from './components/_nav/Nav.vue'
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    Alunos
+    //Alunos,
+    //Sobre,
+    //Professor,
+    Nav
   }
 }
 </script>
 
 <style>
-
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
-body{
+body {
   background-color: greenyellow;
-  font-family: "Montserrat";  
+  font-family: "Montserrat";
   display: grid;
   justify-items: center;
 }
 
-body,html{
+body,
+html {
   margin: 0;
   height: 100%;
 }
-#app { 
+#app {
+  width: 100%;
 }
 
-table{
+.marginPrincipal {
+  width: 50%;
+  margin: auto;
+}
+
+table {
   margin: 0px;
   padding: 0px;
   list-style-type: none;
   width: 100%;
 }
 
-table thead th{
+table thead th {
   background-color: hotpink;
   font-style: italic;
-  padding: 10px 0px; 
-  font-size: 1.3em;  
+  padding: 10px 0px;
+  font-size: 1.3em;
   text-align: center !important;
 }
 
-table tr td{
-padding: 20px; 
-font-size: 1.3em;
-background-color: aquamarine;
-margin-bottom: 2px;
+table tr td {
+  padding: 20px;
+  font-size: 1.3em;
+  background-color: aquamarine;
+  margin-bottom: 2px;
 }
 
-.colPequeno{
+.colPequeno {
   width: 5%;
 }
 
-.btndanger{
+.btndanger {
   background-color: red;
 }
 
-.btn{
-  
+.btn {
   padding: 10px 20px;
   cursor: pointer;
   border: 1 px solid black;
@@ -74,10 +90,9 @@ margin-bottom: 2px;
   border-bottom: 3px solid black;
 }
 
-.btn:hover{
+.btn:hover {
   text-shadow: 1px 1px 1px black;
   margin-top: 3px;
   border-bottom: 1px solid black;
 }
-
 </style>

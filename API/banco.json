@@ -1,14 +1,46 @@
 {
-  "alunos": [
+  "professores": [
     {
       "id": 1,
-      "nome": "Marcus",
-      "sobrenome": "Xavier"
+      "nome": "Marcos"
     },
     {
+      "id": 2,
+      "nome": "Marcio"
+    },
+    {
+      "id": 3,
+      "nome": "Marcelo"
+    }
+  ],
+  "alunos": [
+    {
+      "id": 2,
       "nome": "Alex vieira",
-      "sobrenome": "",
-      "id": 2
+      "sobrenome": "wswsw",
+      "professor": {
+        "id": 3,
+        "nome": "Marcelo"
+      }
+    },
+    {
+      "id": 3,
+      "nome": "Jacunço",
+      "sobrenome": "Dasilva",
+      "professor": {
+        "id": 2,
+        "nome": "Marcio"
+      }
+    },
+    {
+      "id": 4,
+      "nome": "Chicão",
+      "sobrenome": "Da Silva",
+      "dataNasc": "01/01/1999",
+      "professor": {
+        "id": 1,
+        "nome": "Marcos"
+      }
     }
   ]
 }
